@@ -1,0 +1,14 @@
+﻿@model Models.NavigationModel
+
+<nav>
+    <ul>
+        @foreach (var item in Model.Items)
+        {
+            <li>
+                <a asp-page="@item.Page" class="@(item.IsActive ? "active" : "")">
+                    @item.Title
+                </a>
+            </li>
+        }
+    </ul>
+</nav>

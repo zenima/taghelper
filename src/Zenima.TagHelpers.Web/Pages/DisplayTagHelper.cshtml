@@ -1,0 +1,39 @@
+﻿@page
+@{
+    ViewData["Title"] = "Display";
+}
+
+<section class="example">
+    <h2>Div</h2>
+    <div>
+        <div class="wrapper">
+            Display = true
+            <div class="inner" display="true">
+                Content
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="wrapper">
+            Display = false
+            <div class="inner" display="false">
+                Content
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="example">
+    <h2>A</h2>
+    <div>
+        <div class="wrapper">
+            <a href="//www.google.com" display="true">Google with link</a>
+        </div>
+    </div>
+
+    <div>
+        <div class="wrapper">
+            <a href="//www.google.com" display="false">Google without link</a>
+        </div>
+    </div>
+</section>

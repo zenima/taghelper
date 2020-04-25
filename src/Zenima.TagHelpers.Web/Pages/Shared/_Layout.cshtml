@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Zenima.TagHelpers.Web</title>
+    <link rel="stylesheet" type="text/css" href="~/Assets/Site.css" />
+    @RenderSection("Head", false)
+</head>
+<body>
+    @await Component.InvokeAsync("Navigation")
+    <h1>@ViewData["Title"]</h1>
+    <main>
+        @RenderBody()
+    </main>
+</body>
+</html>
