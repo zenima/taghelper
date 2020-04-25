@@ -2,9 +2,8 @@
 
 This library provides additional [TagHelpers](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/intro) for [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core) that can be used to write cleaner code in Razor.
 
-[![Build Status](https://dev.azure.com/zenima/Zenima.Helpers/_apis/build/status/Zenima.TagHelpers?branchName=master)](https://dev.azure.com/zenima/Zenima.Helpers/_build/latest?definitionId=30&branchName=master)
-[![Zenima.TagHelpers package in Zenima.Helpers@Release feed in Azure Artifacts](https://feeds.dev.azure.com/zenima/_apis/public/Packaging/Feeds/edcdba04-7b15-47c2-9efc-917fd7a3f5cf%4088a8d40c-4f0f-4147-ba40-06e121c7fe9f/Packages/027e171d-4f5e-40c7-8a35-0760b9707ca0/Badge)](https://dev.azure.com/zenima/Zenima.Helpers/_packaging?_a=package&feed=edcdba04-7b15-47c2-9efc-917fd7a3f5cf%4088a8d40c-4f0f-4147-ba40-06e121c7fe9f&package=027e171d-4f5e-40c7-8a35-0760b9707ca0&preferRelease=true)
-[![The MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/zenima/taghelpers?sort=semver&style=flat-square)
+![GitHub](https://img.shields.io/github/license/zenima/taghelpers?style=flat-square)
 
 ## Usage
 
