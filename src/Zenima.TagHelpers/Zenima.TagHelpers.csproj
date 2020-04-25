@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Authors>Zenima</Authors>
+    <Company>Zenima</Company>
+    <Description>TagHelpers for Asp.Net</Description>
+    <PackageProjectUrl>https://github.com/zenima/taghelpers</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/zenima/taghelpers.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>AspNet MVC DotNet DotNetCore TagHelper Razor</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>Copyright © 2020 Szabolcs Czinege</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers" Version="2.2.0" />
+    <PackageReference Include="Roslynator.Analyzers" Version="2.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
