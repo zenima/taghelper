@@ -1,0 +1,52 @@
+trigger:
+  - master
+
+pr:
+  branches:
+    include:
+      - master
+      - develop
+      - releases/*
+  paths:
+    exclude:
+      - docs/*
+      - README.md
+
+variables:
+  buildConfiguration: "Release"
+  projects: "**/*.csproj"
+  packageProject: "src/Zenima.TagHelpers/Zenima.TagHelpers.csproj"
+
+jobs:
+  - job: "dotnet"
+    pool:
+      vmImage: ubuntu-latest
+      timeoutInMinutes: 600
+    steps:
+      - task: GitVersion@5
+        displayName: GitVersion
+
+      - task: DotNetCoreCLI@2
+        displayName: Restore
+        inputs:
+          command: restore
+          projects: "$(projects)"
+
+      - task: DotNetCoreCLI@2
+        displayName: Build
+        inputs:
+          projects: "$(projects)"
+          arguments: "--configuration $(buildConfiguration)"
+
+      - task: DotNetCoreCLI@2
+        displayName: Pack
+        inputs:
+          command: pack
+          packagesToPack: "$(packageProject)"
+          versioningScheme: byEnvVar
+          versionEnvVar: GitVersion.NuGetVersion
+
+      - task: PublishBuildArtifacts@1
+        displayName: "Publish Artifact"
+        inputs:
+          PathtoPublish: "$(Build.ArtifactStagingDirectory)"
