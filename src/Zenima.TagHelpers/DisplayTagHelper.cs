@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Razor.TagHelpers;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 
 namespace Zenima.TagHelpers
 {
@@ -13,8 +13,8 @@ namespace Zenima.TagHelpers
     [HtmlTargetElement(Attributes = WrapperAttribute)]
     public class DisplayTagHelper : TagHelper
     {
-        internal const string DisplayAttribute = "display";
-        internal const string WrapperAttribute = "display-wrapper";
+        private const string DisplayAttribute = "display";
+        private const string WrapperAttribute = "display-wrapper";
 
         /// <summary>
         /// Enable/disable rendering tag.
@@ -23,24 +23,19 @@ namespace Zenima.TagHelpers
         public bool Display { get; set; } = true;
 
         /// <summary>
-        /// Enable/disable displaying wrapper tag.
+        /// Enable/disable rendering wrapper tag.
         /// </summary>
         [HtmlAttributeName(WrapperAttribute)]
         public bool DisplayWrapper { get; set; } = true;
 
-        /// <summary>
-        /// Processes the 'display' and 'display-wrapper' attributes
-        /// and configures tag visibility.
-        /// </summary>
-        /// <param name="context">TagHelper context.</param>
-        /// <param name="output">TagHelper output.</param>
+        /// <inheritdoc />
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
             if (context is null)
                 throw new ArgumentNullException(nameof(context));
             if (output is null)
                 throw new ArgumentNullException(nameof(output));
-            
+
             if (!Display)
             {
                 // Hide tag
